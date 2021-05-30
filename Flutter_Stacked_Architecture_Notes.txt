@@ -1,0 +1,32 @@
+
+
+//Notes on Stacked Architecture 
+
+Stacked Architecture is completely based on 3 main concepts
+-> View
+-> ViewModel
+-> Services
+
+# Package Used for this Architecture is the stacked package 
+
+View 
+-> This is the place where we actually create a ui for our app
+-> This field is bind with the ViewModel
+-> When the UI needs to rebuild then it's done with help of ViewModel
+-> View to ViewModel is process like : View says to ViewModel: " hey load the UI again
+or provide me with some service, then the ViewModel does it for the View"
+
+ViewModel
+-> This actullay has the fields which will get loaded on the UI
+-> These fields are called from the View where the view builder builds the view
+then in the ViewModelBuilder in View this ViewModle Builder is given as property value
+to bind it with view
+
+NotifyListeners and Reactive/Nonreactive
+-> The notifyListeners is the function which is called in the ViewModel at the place
+where we want to rebuild the UI
+-> if the constructor method in the View is reactive then the UI will load each time
+the notifyListeners is called
+-> but if the method is nonReactive then when the notifyListeners are called the data will
+be changed but it won't be loaded onto the UI until it's reloaded by hot reload or routing
+
