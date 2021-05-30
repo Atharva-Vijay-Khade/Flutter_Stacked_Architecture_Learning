@@ -30,3 +30,15 @@ the notifyListeners is called
 -> but if the method is nonReactive then when the notifyListeners are called the data will
 be changed but it won't be loaded onto the UI until it's reloaded by hot reload or routing
 
+# Package Used for auto routing 
+auto_route:  in dependencies {used to generate auto route functions that we used to write by hand}
+we also requrire {these are dev dependencies}
+build_runner:
+auto_route_generator: 
+to complete the setup for the auto_route: package
+
+-> More on auto_route: https://pub.dev/packages/auto_route
+-> it requires a minimal amount of code to generate everything needed for navigation inside of your App.
+-> Using auto_route we can simply the routing process, we can avoid huge boilerplate codes,
+auto routes does it for us effectively
+->
